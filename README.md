@@ -51,5 +51,5 @@ VPN asennusohjeet löytyvät sivuilta [https://wiki.metropolia.fi/pages/viewpage
 
 -------
 
-### Group 1: Eric Keränen, Matias Vainio, Jere Salmensaari, Teemu Viljanen & Nico Järvinen
+### Tekijät: Eric Keränen, Matias Vainio, Jere Salmensaari, Teemu Viljanen & Nico Järvinen
 
