@@ -3,11 +3,11 @@
 
 ### **Linkki Backend koodiin**
 
-[https://gitlab.metropolia.fi/jerejs/memoable-backend](https://gitlab.metropolia.fi/jerejs/memoable-backend)
+[https://github.com/Mahamurahti/Memoable_Backend](https://github.com/Mahamurahti/Memoable_Backend)
 
 ### Projektin raportti
 
-[https://gitlab.metropolia.fi/nicoja/ohjelmistotuotantoprojekti-1/-/blob/master/docs/otp2_project%20report.pdf](https://gitlab.metropolia.fi/nicoja/ohjelmistotuotantoprojekti-1/-/blob/master/docs/otp2_project%20report.pdf)
+[https://github.com/Mahamurahti/Memoable/blob/main/docs/otp2_project%20report.pdf](https://github.com/Mahamurahti/Memoable/blob/main/docs/otp2_project%20report.pdf)
 
 ## **Projektista:**
 
