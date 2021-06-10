@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+/mnt/d/Documents/_PROJECTS/Java/AMK_projects/ohjelmistotuotantoprojekti-1/workspace/.metadata/.plugins/org.eclipse.jdt.core
+3842426239.index
+646308851.index

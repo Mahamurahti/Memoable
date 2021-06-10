@@ -1,0 +1,14 @@
+.styled-text-area .red {
+    -fx-fill: red;
+    -fx-font-size: 15;
+}
+
+.styled-text-area .green {
+    -fx-fill: green;
+    -fx-font-size: 35;
+}
+
+.styled-text-area .blue {
+    -fx-fill: blue;
+    -fx-font-size: 55;
+}

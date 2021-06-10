@@ -1,0 +1,1 @@
+mongodb+srv://user:salasana@cluster0.96tml.mongodb.net/test?retryWrites=true&w=majority

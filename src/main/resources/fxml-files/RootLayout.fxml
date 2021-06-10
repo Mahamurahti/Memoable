@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="borderPane" prefHeight="500.0" prefWidth="900.0" stylesheets="@../stylesheets/light_theme.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="noteApp.view.RootLayoutController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="fileMenu" mnemonicParsing="false" text="%file">
+            <items>
+              <MenuItem fx:id="saveAs" mnemonicParsing="false" onAction="#handleSaveAs" text="%saveas" />
+                  <MenuItem fx:id="add" mnemonicParsing="false" onAction="#handleAdd" text="%add" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="settings" mnemonicParsing="false" onAction="#handleSettings" text="%settings" />
+              <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#handleExit" text="%exit" />
+            </items>
+          </Menu>
+          <Menu fx:id="editMenu" mnemonicParsing="false" text="%edit">
+            <items>
+                  <MenuItem fx:id="copy" mnemonicParsing="false" onAction="#handleCopy" text="%copy" />
+                  <MenuItem fx:id="paste" mnemonicParsing="false" onAction="#handlePaste" text="%paste" />
+                  <MenuItem fx:id="cut" mnemonicParsing="false" onAction="#handleCut" text="%cut" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="undo" mnemonicParsing="false" onAction="#handleUndo" text="%undo" />
+                  <MenuItem fx:id="redo" mnemonicParsing="false" onAction="#handleRedo" text="%redo" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem fx:id="delete" mnemonicParsing="false" onAction="#handleDelete" text="%delete" />
+            </items>
+          </Menu>
+            <Menu fx:id="viewMenu" mnemonicParsing="false" text="%view">
+               <items>
+                  <Menu fx:id="themeChangeMenu" mnemonicParsing="false" text="%theme">
+                    <items>
+                        <RadioMenuItem fx:id="light" mnemonicParsing="false" onAction="#handleLightTheme" selected="true" text="%light">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="theme" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem fx:id="dark" mnemonicParsing="false" onAction="#handleDarkTheme" text="%dark" toggleGroup="$theme" />
+                    </items>
+                  </Menu>
+                  <Menu fx:id="hlChangeMenu" mnemonicParsing="false" text="%hl">
+                    <items>
+                        <RadioMenuItem fx:id="red" mnemonicParsing="false" onAction="#handleRedHighlight" text="%hl.R">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="highlight" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem fx:id="green" mnemonicParsing="false" onAction="#handleGreenHighlight" text="%hl.G" toggleGroup="$highlight" />
+                        <RadioMenuItem fx:id="blue" mnemonicParsing="false" onAction="#handleBlueHighlight" text="%hl.B" toggleGroup="$highlight" />
+                        <RadioMenuItem fx:id="yellow" mnemonicParsing="false" onAction="#handleYellowHighlight" selected="true" text="%hl.Y" toggleGroup="$highlight" />
+                    </items>
+                  </Menu>
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <Menu fx:id="changeViewMenu" mnemonicParsing="false" text="%c.view">
+                     <items>
+                        <RadioMenuItem fx:id="defaultView" mnemonicParsing="false" onAction="#handleMainView" text="%default">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="view" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem fx:id="archive" mnemonicParsing="false" onAction="#handleArchive" text="%archive" toggleGroup="$view" />
+                     </items>
+                  </Menu>
+               </items>
+            </Menu>
+            <Menu fx:id="userMenu" mnemonicParsing="false" text="%user">
+               <items>
+                  <MenuItem fx:id="signIn" mnemonicParsing="false" onAction="#handleSignIn" text="%sin" />
+               </items></Menu>
+          <Menu fx:id="helpMenu" mnemonicParsing="false" text="%help">
+            <items>
+              <MenuItem fx:id="about" mnemonicParsing="false" onAction="#handleAbout" text="%about" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

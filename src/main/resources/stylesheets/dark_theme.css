@@ -1,0 +1,239 @@
+/*
+    Dark Theme CSS
+    @author Eric Keränen
+    @version 1.6
+*/
+/* ----------------------------------- Color Variables ----------------------------------- */
+* {
+    -fx-dark-but-not-black: #17191B;
+    -fx-not-quite-black: #23272A;
+    -fx-light-black: #3B4146;
+    -fx-snow-white: #F2F2F2;
+}
+/* ----------------------------------- VBox in Signing in / up ----------------------------------- */
+.vbox {
+    -fx-background-color: -fx-not-quite-black;
+}
+/* ----------------------------------- Buttons ----------------------------------- */
+.button {
+    -fx-skin: 'noteApp.view.skins.MainButtonSkin';
+
+    -fx-background-color: -fx-light-black;
+    -fx-text-fill: -fx-snow-white;
+}
+.button:disabled{
+    -fx-opacity: 0.4;
+}
+#new {
+    -fx-background-radius: 50%;
+}
+#archive {
+    -fx-background-radius: 20px 0 0 0;
+}
+#delete {
+    -fx-background-radius: 0 0 20px 0;
+}
+.deleteBtn {
+    -fx-skin: none;
+    -fx-background-radius: 50%;
+    -fx-opacity: 0.5;
+}
+.deleteBtn:hover {
+    -fx-opacity: 1;
+}
+.plus {
+    -fx-fill: -fx-snow-white;
+}
+#login,
+#register {
+    -fx-skin: 'noteApp.view.skins.SignButtonSkin';
+}
+/* ----------------------------------- Menu -----------------------------------*/
+.menu-bar {
+    -fx-background-color: -fx-light-black;
+    -fx-text-fill: -fx-snow-white;
+}
+.menu-item,
+.context-menu {
+    -fx-min-width: 150px;
+
+    -fx-background-color: -fx-dark-but-not-black;
+}
+/* ----------------------------------- Labels -----------------------------------*/
+.label {
+    -fx-text-fill: -fx-snow-white;
+}
+/* ----------------------------------- SplitPane ----------------------------------- */
+.split-pane:horizontal > .split-pane-divider {
+    -fx-padding: 0 .5px 0 .5px;
+    -fx-background-color: -fx-dark-but-not-black;
+}
+.split-pane {
+    -fx-background-color: -fx-not-quite-black;
+}
+/* ----------------------------------- Left Anchor of SplitPane ----------------------------------- */
+.left-anchor {
+    -fx-background-color: -fx-not-quite-black;
+}
+/* ----------------------------------- ListView ----------------------------------- */
+.listCon {
+    -fx-background-color: -fx-not-quite-black;
+}
+.left-anchor .listCon .list-view {
+    -fx-border-color: transparent;
+
+    -fx-background-color: -fx-not-quite-black;
+}
+.left-anchor .listCon .list-view .list-cell {
+    -fx-background-color: -fx-not-quite-black;
+    -fx-text-fill: -fx-snow-white;
+    -fx-background-insets: 10px 22px 10px 0;
+    -fx-padding: 25px 22px 25px 5px;
+    -fx-font-size: 14px;
+
+    -fx-skin: 'noteApp.view.skins.MainListCellSkin';
+}
+.left-anchor .listCon .list-view .list-cell:filled {
+    -fx-background-color: -fx-dark-but-not-black;
+}
+.left-anchor .listCon .list-view .list-cell:focused {
+    -fx-text-fill: -fx-snow-white;
+    -fx-background-insets: 10px 0 10px 0;
+    -fx-font-weight: bold;
+}
+.left-anchor .listCon .list-view .scroll-bar:vertical {
+    -fx-scale-x: 0;
+    -fx-pref-width: 0;
+}
+/* ----------------------------------- Right Anchor of SplitPane ----------------------------------- */
+.right-anchor {
+    -fx-background-color: -fx-dark-but-not-black;
+}
+.right-anchor .text-field {
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+
+    -fx-background-color: -fx-not-quite-black;
+    -fx-text-fill: -fx-snow-white;
+}
+/* ----------------------------------- ComboBoxes for Sort, Tags & Labels ----------------------------------- */
+.combo-box,
+.combo-box .arrow-button {
+    -fx-background-color: -fx-not-quite-black;
+    -fx-text-fill: -fx-snow-white;
+}
+.combo-box .list-view,
+.combo-box .list-view .list-cell {
+    -fx-background-color: -fx-not-quite-black;
+    -fx-text-fill: -fx-snow-white;
+}
+.combo-box .list-view .list-cell:hover,
+.combo-box .list-view .list-cell:focused,
+.combo-box .list-view .list-cell {
+    -fx-padding: 3px;
+    -fx-background-insets: 0;
+    -fx-font-weight: normal;
+}
+.list-cell {
+    -fx-text-fill: -fx-snow-white;
+}
+/* ----------------------------------- Text area ----------------------------------- */
+.styled-text-area {
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+
+    -fx-background-color: -fx-not-quite-black;
+    -fx-text-fill: -fx-snow-white;
+
+    -fx-padding: 2px 4px 20px 2px;
+}
+.styled-text-area .scroll-bar:vertical {
+    -fx-padding: 0 0 22px 0;
+}
+.styled-text-area .text {
+    -fx-fill: white;
+    -fx-font-size: 18;
+}
+.styled-text-area .caret {
+    -fx-stroke: white;
+}
+.styled-text-area:disabled {
+    -fx-opacity: 0.4;
+}
+/* ----------------------------------- Tool Bar ----------------------------------- */
+.toolBar {
+    -fx-background-color: transparent;
+}
+.toolBarButton {
+    -fx-background-radius: 50%;
+}
+/* ----------------------------------- ScrollBars ----------------------------------- */
+.scroll-bar:vertical,
+.increment-button,
+.decrement-button,
+.text-area .scroll-pane .viewport,
+.text-area .scroll-pane .content,
+.list-view .scroll-pane .viewport,
+.list-view .scroll-pane .content {
+    -fx-background-color: transparent;
+}
+.scroll-bar:vertical {
+    -fx-pref-width: 12px;
+}
+.list-view .scroll-bar:horizontal .increment-arrow,
+.list-view .scroll-bar:horizontal .decrement-arrow,
+.list-view .scroll-bar:horizontal .increment-button,
+.list-view .scroll-bar:horizontal .decrement-button {
+    -fx-padding: 0;
+}
+/* ----------------------------------- Login TextField ----------------------------------- */
+.loginField {
+    -fx-background-color: -fx-dark-but-not-black;
+    -fx-text-fill: -fx-snow-white;
+}
+/* ----------------------------------- DialogPane ----------------------------------- */
+.dialog-pane {
+    -fx-background-color: -fx-not-quite-black;
+}
+.dialog-pane .header-panel {
+    -fx-background-color: -fx-not-quite-black;
+}
+.dialog-pane .button {
+    -fx-skin: 'noteApp.view.skins.SignButtonSkin';
+}
+/* ----------------------------------- About Page ----------------------------------- */
+.aboutPage, .aboutPage .pane {
+    -fx-text-fill: -fx-snow-white;
+    -fx-background-color: -fx-not-quite-black;
+}
+/* ----------------------------------- Settings ----------------------------------- */
+.tabPane {
+    -fx-background-color: -fx-not-quite-black;
+}
+.tabPane:left .tab-header-background {
+    -fx-background-color: -fx-light-black;
+}
+.tabPane:left .tab {
+    -fx-background-color: -fx-dark-but-not-black;
+}
+.tabPane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: none
+}
+.tabPane:focused > .tab-header-area > .headers-region > .tab:selected {
+    -fx-border-radius: 2px;
+    -fx-border-width: 1px 1px 0 1px;
+}
+.tabPane .tab:selected {
+    -fx-background-color: -fx-not-quite-black;
+}
+.tabPane .radio-button, .tabPane .tab-label {
+    -fx-text-fill: -fx-snow-white;
+}
+.borderPane .buttonPane {
+    -fx-border-color: -fx-dark-but-not-black;
+    -fx-border-width: 1px 0 0 0;
+    -fx-background-color: -fx-not-quite-black;
+}
+.borderPane .buttonPane .button {
+    -fx-skin: none;
+}

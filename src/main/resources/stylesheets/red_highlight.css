@@ -1,0 +1,62 @@
+/*
+    Red Highlights CSS
+    @author Eric Keränen
+    @version 1.4
+*/
+/* ----------------------------------- Color Variables ----------------------------------- */
+* {
+    -fx-red-color: #B03E3E;
+}
+/* ----------------------------------- Menu ----------------------------------- */
+.menu {
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: transparent;
+}
+.menu:hover {
+    -fx-border-color: -fx-red-color;
+    -fx-background-color: transparent;
+}
+.menu:showing {
+    -fx-background-color: -fx-red-color;
+}
+.menu-item:hover {
+    -fx-background-color: -fx-red-color;
+}
+/* ----------------------------------- Buttons ----------------------------------- */
+.button:hover {
+    -fx-background-color: -fx-red-color;
+}
+/* ----------------------------------- TextField ----------------------------------- */
+.text-field {
+    -fx-accent: -fx-red-color;
+}
+/* ----------------------------------- TextArea ----------------------------------- */
+.styled-text-area .selection {
+    -fx-fill: -fx-red-color;
+}
+.styled-text-area .scroll-bar:vertical .thumb,
+.list-view .scroll-bar:vertical .thumb{
+    -fx-background-color: -fx-red-color;
+}
+/* ----------------------------------- ListView ----------------------------------- */
+.left-anchor .listCon .list-view .list-cell:focused{
+    -fx-effect: dropshadow(one-pass-box, -fx-red-color, 1, 0, 0, 3);
+}
+/* ----------------------------------- ComboBox ----------------------------------- */
+.combo-box .list-view .list-cell:hover,
+.combo-box .list-view .list-cell:focused{
+    -fx-background-color: -fx-red-color;
+}
+/* ----------------------------------- Extras ----------------------------------- */
+.extra {
+    -fx-fill: -fx-red-color;
+    -fx-stroke: -fx-red-color;
+}
+/* ----------------------------------- About Page ----------------------------------- */
+.aboutPage .scroll-bar:vertical .thumb{
+    -fx-background-color: -fx-red-color;
+}
+/* ----------------------------------- Settings ----------------------------------- */
+.tabPane:focused > .tab-header-area > .headers-region > .tab:selected {
+    -fx-border-color: -fx-red-color;
+}

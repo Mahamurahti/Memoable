@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import org.fxmisc.richtext.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="noteApp.view.MainLayoutController">
+    <children>
+        <SplitPane dividerPositions="0.2686733556298774" layoutY="27.0" prefHeight="500.0" prefWidth="900.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="250.0" prefHeight="160.0" prefWidth="250.0" styleClass="left-anchor">
+                    <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="listCon" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="-2.0" AnchorPane.topAnchor="70.0">
+                            <children>
+                                <ListView fx:id="savedNoteView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <opaqueInsets>
+                                        <Insets />
+                                    </opaqueInsets>
+                                </ListView>
+                            </children>
+                        </AnchorPane>
+                        <Label fx:id="title" prefHeight="40.0" prefWidth="140.0" text="%yourNotes" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+                            <font>
+                                <Font name="Roboto Light" size="18.0" />
+                            </font>
+                            <padding>
+                                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                            </padding>
+                            <opaqueInsets>
+                                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                            </opaqueInsets>
+                        </Label>
+                        <Button id="new" fx:id="newButton" layoutX="119.0" layoutY="446.0" mnemonicParsing="false" onAction="#handleNew" prefHeight="60.0" prefWidth="60.0" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="22.0">
+                            <font>
+                                <Font name="Roboto Light" size="12.0" />
+                            </font>
+                            <graphic>
+                                <HBox fx:id="plus" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" />
+                            </graphic>
+                        </Button>
+                        <ComboBox fx:id="comboBoxSort" layoutX="68.0" layoutY="20.0" prefHeight="42.0" promptText="%sortby" styleClass="sort" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="rightAnchor" minHeight="0.0" minWidth="500.0" prefHeight="473.0" prefWidth="204.0" styleClass="right-anchor">
+                    <children>
+                        <VBox fx:id="vbox" styleClass="styled-text-area" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0" />
+                        <InlineCssTextArea fx:id="note" onKeyReleased="#handleNote" prefHeight="200.0" prefWidth="200.0" styleClass="styled-text-area" stylesheets="@../stylesheets/manual-highlighting.css" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0">
+                        </InlineCssTextArea>
+                        <Button id="save" fx:id="saveAsButton" layoutX="521.0" layoutY="440.0" mnemonicParsing="false" onAction="#handleSaveAs" prefHeight="42.0" prefWidth="140.0" text="%saveas" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="22.0">
+                            <font>
+                                <Font name="Roboto Light" size="12.0" />
+                            </font></Button>
+                        <Button id="archive" fx:id="archiveButton" layoutX="492.0" layoutY="434.0" mnemonicParsing="false" onAction="#handleArchive" prefHeight="42.0" prefWidth="140.0" text="%archives" AnchorPane.bottomAnchor="22.0" AnchorPane.rightAnchor="162.0">
+                            <font>
+                                <Font name="Roboto Light" size="12.0" />
+                            </font>
+                        </Button>
+                        <HBox fx:id="toolBar" layoutX="22.0" layoutY="376.0" prefHeight="42.0" prefWidth="268.0" styleClass="toolBar" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="22.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#handleBold" prefHeight="42.0" prefWidth="42.0" styleClass="toolBarButton" text="B">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#handleItalic" prefHeight="42.0" prefWidth="42.0" styleClass="toolBarButton" text="I">
+                                    <font>
+                                        <Font name="System Italic" size="12.0" />
+                                    </font>
+                                </Button>
+                                <Button mnemonicParsing="false" onAction="#handleFontSize" prefHeight="42.0" prefWidth="42.0" styleClass="toolBarButton" text="Aa" />
+                                <Button mnemonicParsing="false" onAction="#handleUnderline" prefHeight="42.0" prefWidth="42.0" styleClass="toolBarButton" text="U" underline="true" />
+                                <ComboBox fx:id="fontButton" onAction="#handleFont" prefHeight="42.0" prefWidth="100.0" promptText="%font" />
+                            </children>
+                        </HBox>
+                        <HBox layoutX="20.0" layoutY="20.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                            <children>
+                                <TextField fx:id="noteName" onKeyReleased="#handleNote" prefHeight="40.0" promptText="%noteName" HBox.hgrow="ALWAYS">
+                                    <font>
+                                        <Font name="Roboto Light" size="18.0" />
+                                    </font>
+                                </TextField>
+                                <Label fx:id="priority" alignment="CENTER" prefHeight="40.0" prefWidth="100.0" text="%prio" textAlignment="CENTER">
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </Label>
+                                <ComboBox fx:id="comboBoxTag" prefHeight="42.0" prefWidth="100.0" promptText="None" />
+                                <Label fx:id="label" alignment="CENTER" prefHeight="40.0" prefWidth="80.0" text="%label" textAlignment="CENTER">
+                                    <padding>
+                                        <Insets left="10.0" right="10.0" />
+                                    </padding>
+                                </Label>
+                                <ComboBox fx:id="comboBoxLabel" editable="true" prefHeight="42.0" prefWidth="100.0" promptText="%none" />
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

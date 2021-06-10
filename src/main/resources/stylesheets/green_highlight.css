@@ -1,0 +1,62 @@
+/*
+    Green Highlights CSS
+    @author Eric Keränen
+    @version 1.4
+*/
+/* ----------------------------------- Color Variables ----------------------------------- */
+* {
+    -fx-green-color: #65D95C;
+}
+/* ----------------------------------- Menu ----------------------------------- */
+.menu {
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: transparent;
+}
+.menu:hover {
+    -fx-border-color: -fx-green-color;
+    -fx-background-color: transparent;
+}
+.menu:showing {
+    -fx-background-color: -fx-green-color;
+}
+.menu-item:hover {
+    -fx-background-color: -fx-green-color;
+}
+/* ----------------------------------- Buttons ----------------------------------- */
+.button:hover {
+    -fx-background-color: -fx-green-color;
+}
+/* ----------------------------------- TextField ----------------------------------- */
+.text-field {
+    -fx-accent: -fx-green-color;
+}
+/* ----------------------------------- TextArea ----------------------------------- */
+.styled-text-area .selection {
+    -fx-fill: -fx-green-color;
+}
+.styled-text-area .scroll-bar:vertical .thumb,
+.list-view .scroll-bar:vertical .thumb{
+    -fx-background-color: -fx-green-color;
+}
+/* ----------------------------------- ListView ----------------------------------- */
+.left-anchor .listCon .list-view .list-cell:focused{
+    -fx-effect: dropshadow(one-pass-box, -fx-green-color, 1, 0, 0, 3);
+}
+/* ----------------------------------- ComboBox ----------------------------------- */
+.combo-box .list-view .list-cell:hover,
+.combo-box .list-view .list-cell:focused{
+    -fx-background-color: -fx-green-color;
+}
+/* ----------------------------------- Extras ----------------------------------- */
+.extra {
+    -fx-fill: -fx-green-color;
+    -fx-stroke: -fx-green-color;
+}
+/* ----------------------------------- About Page ----------------------------------- */
+.aboutPage .scroll-bar:vertical .thumb{
+    -fx-background-color: -fx-green-color;
+}
+/* ----------------------------------- Settings ----------------------------------- */
+.tabPane:focused > .tab-header-area > .headers-region > .tab:selected {
+    -fx-border-color: -fx-green-color;
+}

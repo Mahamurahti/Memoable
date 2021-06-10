@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="borderPane" prefHeight="400.0" prefWidth="600.0" styleClass="borderPane" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="noteApp.view.SettingsRootLayoutController">
+   <center>
+      <TabPane fx:id="tabPane" prefHeight="200.0" prefWidth="200.0" side="LEFT" styleClass="tabPane" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="appearance" text="%appearance">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label fx:id="lAppearance" prefHeight="50.0" prefWidth="220.0" text="Appearance">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Line endX="100.0" startX="-100.0" styleClass="extra">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <Label fx:id="lTheme" prefHeight="25.0" prefWidth="220.0" text="%theme">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Line endX="100.0" layoutX="131.0" layoutY="60.0" startX="-100.0" styleClass="extra">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <RadioButton fx:id="darkRadio" mnemonicParsing="false" onAction="#handleDarkRadio" prefHeight="25.0" prefWidth="200.0" text="%dark">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="theme" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="lightRadio" layoutX="10.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleLightRadio" prefHeight="25.0" prefWidth="200.0" text="%light" toggleGroup="$theme">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </RadioButton>
+                              <Label fx:id="lHighlights" prefHeight="25.0" prefWidth="220.0" text="%hl">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Line endX="100.0" layoutX="131.0" layoutY="97.0" startX="-100.0" styleClass="extra">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <RadioButton fx:id="redRadio" layoutX="10.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleRedRadio" prefHeight="25.0" prefWidth="200.0" text="%hl.R">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="highlight" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="greenRadio" layoutX="10.0" layoutY="211.0" mnemonicParsing="false" onAction="#handleGreenRadio" prefHeight="25.0" prefWidth="200.0" text="%hl.G" toggleGroup="$highlight">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </RadioButton>
+                              <RadioButton fx:id="blueRadio" layoutX="10.0" layoutY="236.0" mnemonicParsing="false" onAction="#handleBlueRadio" prefHeight="25.0" prefWidth="200.0" text="%hl.B" toggleGroup="$highlight">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </RadioButton>
+                              <RadioButton fx:id="yellowRadio" layoutX="10.0" layoutY="261.0" mnemonicParsing="false" onAction="#handleYellowRadio" prefHeight="25.0" prefWidth="200.0" text="%hl.Y" toggleGroup="$highlight">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="languageTab" text="%language">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="lLanguage" prefHeight="50.0" prefWidth="220.0" text="%language">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Line endX="100.0" startX="-100.0" styleClass="extra">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <Label fx:id="lDLanguage" prefHeight="25.0" prefWidth="220.0" text="%dLanguage">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Line endX="100.0" startX="-100.0" styleClass="extra">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <RadioButton fx:id="finnishRadio" mnemonicParsing="false" onAction="#handleFinnishRadio" prefHeight="25.0" prefWidth="200.0" text="Suomi">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="language" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="englishRadio" mnemonicParsing="false" onAction="#handleEnglishRadio" prefHeight="25.0" prefWidth="200.0" text="English" toggleGroup="$language">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </RadioButton>
+                              <RadioButton fx:id="russianRadio" layoutX="10.0" layoutY="136.0" mnemonicParsing="false" onAction="#handleRussianRadio" prefHeight="25.0" prefWidth="200.0" text="Русский" toggleGroup="$language">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </RadioButton>
+                              <RadioButton fx:id="spanishRadio" layoutX="10.0" layoutY="161.0" mnemonicParsing="false" onAction="#handleSpanishRadio" prefHeight="25.0" prefWidth="200.0" text="Español" toggleGroup="$language">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="fileTab" text="%file">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="filePref" prefHeight="50.0" prefWidth="220.0" text="%filePref">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                              </Label>
+                              <Line endX="100.0" startX="-100.0" styleClass="extra">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <Label fx:id="defPath" prefHeight="25.0" prefWidth="220.0" text="%defPath">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Line endX="100.0" layoutX="131.0" layoutY="60.0" startX="-100.0" styleClass="extra">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" />
+                                 </VBox.margin>
+                              </Line>
+                              <Button fx:id="setPath" mnemonicParsing="false" onAction="#handleDefaultPath" text="%setPath">
+                                 <VBox.margin>
+                                    <Insets left="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <TextField fx:id="notesPath">
+                                 <VBox.margin>
+                                    <Insets left="20.0" top="10.0" />
+                                 </VBox.margin>
+                              </TextField>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <AnchorPane fx:id="buttonPane" prefHeight="30.0" prefWidth="200.0" styleClass="buttonPane" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="cancelButton" cancelButton="true" mnemonicParsing="false" onAction="#handleCancel" prefWidth="100.0" text="%cancel" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="110.0" AnchorPane.topAnchor="2.0" />
+            <Button fx:id="applyButton" mnemonicParsing="false" onAction="#handleApply" prefWidth="100.0" styleClass="applyButton" text="%apply" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="2.0" />
+            <Button fx:id="okButton" defaultButton="true" layoutX="428.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleOk" prefWidth="50.0" text="%ok" AnchorPane.bottomAnchor="2.0" AnchorPane.rightAnchor="215.0" AnchorPane.topAnchor="2.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

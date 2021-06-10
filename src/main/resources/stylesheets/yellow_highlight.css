@@ -1,0 +1,62 @@
+/*
+    Yellow Highlights CSS
+    @author Eric Keränen
+    @version 1.4
+*/
+/* ----------------------------------- Color Variables ----------------------------------- */
+* {
+    -fx-yellow-color: #EFBB00;
+}
+/* ----------------------------------- Menu ----------------------------------- */
+.menu {
+    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: transparent;
+}
+.menu:hover {
+    -fx-border-color: -fx-yellow-color;
+    -fx-background-color: transparent;
+}
+.menu:showing {
+    -fx-background-color: -fx-yellow-color;
+}
+.menu-item:hover {
+    -fx-background-color: -fx-yellow-color;
+}
+/* ----------------------------------- Buttons ----------------------------------- */
+.button:hover {
+    -fx-background-color: -fx-yellow-color;
+}
+/* ----------------------------------- TextField ----------------------------------- */
+.text-field {
+    -fx-accent: -fx-yellow-color;
+}
+/* ----------------------------------- TextArea ----------------------------------- */
+.styled-text-area .selection {
+    -fx-fill: -fx-yellow-color;
+}
+.styled-text-area .scroll-bar:vertical .thumb,
+.list-view .scroll-bar:vertical .thumb{
+    -fx-background-color: -fx-yellow-color;
+}
+/* ----------------------------------- ListView ----------------------------------- */
+.left-anchor .listCon .list-view .list-cell:focused{
+    -fx-effect: dropshadow(one-pass-box, -fx-yellow-color, 1, 0, 0, 3);
+}
+/* ----------------------------------- ComboBox ----------------------------------- */
+.combo-box .list-view .list-cell:hover,
+.combo-box .list-view .list-cell:focused{
+    -fx-background-color: -fx-yellow-color;
+}
+/* ----------------------------------- Extras ----------------------------------- */
+.extra {
+    -fx-fill: -fx-yellow-color;
+    -fx-stroke: -fx-yellow-color;
+}
+/* ----------------------------------- About Page ----------------------------------- */
+.aboutPage .scroll-bar:vertical .thumb{
+    -fx-background-color: -fx-yellow-color;
+}
+/* ----------------------------------- Settings ----------------------------------- */
+.tabPane:focused > .tab-header-area > .headers-region > .tab:selected {
+    -fx-border-color: -fx-yellow-color;
+}

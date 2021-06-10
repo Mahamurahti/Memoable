@@ -1,0 +1,8 @@
+/.idea
+/target
+**/*.bin
+./bin
+/.vscode
+Test
+/${project.build.directory}
+/config_linux
